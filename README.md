@@ -20,11 +20,11 @@ Dataset source:https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-5
    ```bash
    pyton predict_review.py
 ## Tools and Technologies
-Python
-Scikit-learn
-Pandas
-NumPy
-Natural Language Processing(NLP)
+- Python
+- Scikit-learn
+- Pandas
+- NumPy
+- Natural Language Processing(NLP)
 ## Project Goal
 The objective of this project is to train a machine learning model that can accuratley classify movie reviews based on thier sentiment. Several models will be explored and ecaluated to determone the most effective approach.
    
