@@ -5,10 +5,10 @@ The dataset used comes from Kaggle and is titled *IMDB Dataset of 50k Movie Revi
 Dataset source:https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews?resource=download
 ## How to Run
 1. Make sure the following files are in the same folder:
-`train_sentiment_model.py
-`predict_review.py
-`best_sentiment_model.pkl
-`IMDB Dataset.csv
+`train_sentiment_model.py`
+`predict_review.py`
+`best_sentiment_model.pkl`
+`IMDB Dataset.csv`
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
