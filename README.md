@@ -19,7 +19,7 @@ Dataset source:https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-5
 4. Predict the sentiment of a review:
    ```bash
    pyton predict_review.py
-## Tools and Technologies
+## Planned Tools and Technologies
 - Python
 - Scikit-learn
 - Pandas
