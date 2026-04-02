@@ -36,3 +36,8 @@ y_pred = model.predict(X_test_tfidf)
 #evaluate
 accuracy = accuracy_score(y_test, y_pred)
 print("\nModel Accuracy:", accuracy)
+
+from sklearn.metrics import classification_report
+
+print("\nClassification Report:\n")
+print(classification_report(y_test, y_pred))
