@@ -22,3 +22,17 @@ X_test_tfidf= vectorizer.transform(X_test)
 print("Data loaded and vectorized successfully")
 print("Training samples:", X_train_tfidf.shape)
 print("Testing samples:", X_test_tfidf.shape)
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+#train model
+model = LogisticRegression(max_iter=1000)
+model.fit(X_train_tfidf, y_train)
+
+#make predictions
+y_pred = model.predict(X_test_tfidf)
+
+#evaluate
+accuracy = accuracy_score(y_test, y_pred)
+print("\nModel Accuracy:", accuracy)
