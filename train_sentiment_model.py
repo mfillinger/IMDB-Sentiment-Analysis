@@ -41,3 +41,11 @@ from sklearn.metrics import classification_report
 
 print("\nClassification Report:\n")
 print(classification_report(y_test, y_pred))
+
+import joblib
+
+#save model and vectorizer
+joblib.dump(model, "best_sentiment_model.pkl")
+joblib.dump(vectorizer, "tfidf_vectorizer.pkl")
+
+print("\nModel and vectorizer saved successfully")
