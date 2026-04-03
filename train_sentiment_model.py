@@ -49,3 +49,8 @@ joblib.dump(model, "best_sentiment_model.pkl")
 joblib.dump(vectorizer, "tfidf_vectorizer.pkl")
 
 print("\nModel and vectorizer saved successfully")
+
+from sklearn.metrics import confusion_matrix
+
+cm = confusion_matrix(y_test, y_pred)
+print("\nConfusion Matrix:\n", cm)
