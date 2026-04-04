@@ -1,7 +1,14 @@
 import pandas as pd
+import re
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+#text cleaning function
+def clean_text(text):
+    text= text.lower()
+    text= re.sub(r"<.*?>", "", text) 
+    text= re.sub(r"[^a-zA-Z\s]", "", text) 
+    return text
 #load dataset
 df= pd.read_csv("IMDB Dataset.csv")
 
