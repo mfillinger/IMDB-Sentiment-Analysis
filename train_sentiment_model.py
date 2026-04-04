@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 #load dataset
-df = pd.read_csv("IMDB Dataset.csv")
+df= pd.read_csv("IMDB Dataset.csv")
 
 #convert labels to numbers
 df['sentiment']= df['sentiment'].map({'positive': 1, 'negative': 0})
@@ -27,14 +27,14 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 #train model
-model = LogisticRegression(max_iter=1000)
+model= LogisticRegression(max_iter=1000)
 model.fit(X_train_tfidf, y_train)
 
 #make predictions
-y_pred = model.predict(X_test_tfidf)
+y_pred= model.predict(X_test_tfidf)
 
 #evaluate
-accuracy = accuracy_score(y_test, y_pred)
+accuracy= accuracy_score(y_test, y_pred)
 print("\nModel Accuracy:", accuracy)
 
 from sklearn.metrics import classification_report
@@ -52,5 +52,11 @@ print("\nModel and vectorizer saved successfully")
 
 from sklearn.metrics import confusion_matrix
 
-cm = confusion_matrix(y_test, y_pred)
+cm= confusion_matrix(y_test, y_pred)
 print("\nConfusion Matrix:\n", cm)
+
+train_acc= model.score(X_train_tfidf, y_train)
+test_acc= model.score(X_test_tfidf, y_test)
+
+print("\nTrain Accuracy:", train_acc)
+print("Test Accuracy:", test_acc)
