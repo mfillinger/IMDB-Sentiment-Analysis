@@ -67,3 +67,13 @@ test_acc= model.score(X_test_tfidf, y_test)
 
 print("\nTrain Accuracy:", train_acc)
 print("Test Accuracy:", test_acc)
+
+from sklearn.naive_bayes import MultinomialNB
+
+nb_model= MultinomialNB()
+nb_model.fit(X_train_tfidf, y_train)
+
+nb_pred= nb_model.predict(X_test_tfidf)
+nb_acc= accuracy_score(y_test, nb_pred)
+
+print("\nNaive Bayes Accuracy:", nb_acc)
