@@ -14,10 +14,16 @@ if st.button("Predict"):
     if review.strip() == "":
         st.warning("Please enter a review.")
     else:
-        review_tfidf = vectorizer.transform([review])
+        review_tfidf= vectorizer.transform([review])
+
         prediction= model.predict(review_tfidf)
+        probability= model.predict_proba(review_tfidf)
+
+        confidence= probability.max()
 
         if prediction[0] == 1:
             st.success("Positive Sentiment")
         else:
             st.error("Negative Sentiment")
+
+        st.write(f"Confidence: {confidence:.2f}")
