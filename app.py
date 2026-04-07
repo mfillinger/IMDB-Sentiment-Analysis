@@ -20,7 +20,7 @@ if st.button("Predict"):
         probability= model.predict_proba(review_tfidf)
 
         confidence= probability.max()
-
+        st.divider()
         if prediction[0] == 1:
             st.success("Positive Sentiment")
         else:
