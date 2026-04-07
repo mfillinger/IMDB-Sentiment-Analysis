@@ -26,4 +26,4 @@ if st.button("Predict"):
         else:
             st.error("Negative Sentiment")
 
-        st.write(f"Confidence: {confidence:.2f}")
+        st.caption(f"Confidence: {confidence:.2f}")
