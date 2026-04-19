@@ -28,3 +28,5 @@ Dataset source:https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-5
 ## Project Goal
 The objective of this project is to train a machine learning model that can accuratley classify movie reviews based on thier sentiment. Several models will be explored and ecaluated to determone the most effective approach.
    
+## Project Presentation Video
+[Watch the full presentation] (https://drive.google.com/file/d/1AgdshwQEgLsL7O-Acf5RrcClvBLHA9_D/view?usp=sharing)
